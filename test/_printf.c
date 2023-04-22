@@ -25,26 +25,26 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 					c = va_arg(ap, int);
-					count += write(1, &c, 1);
+					count += _putchar(c);
 					break;
 				case '%':
 					c = '%';
-					count += write(1, &c, 1);
+					count += _putchar(c);
 					break;
 				case 's':
 					char *str = va_arg(ap, char *);
 
 					for (j = 0; str[j] != '\0'; j++)
-						count += write(1, &str[j], 1);
+						count += _putchar(str[j]);
 					break;
 			}
 		}
 		else
-			count += write(1, &format[i], 1);
+			count += _putchar(format[i]);
 
 		i++;
 	}
-	write(1, "\n", 2);
+	_putchar('\n');
 	va_end(ap);
 
 	return (count);
