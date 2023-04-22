@@ -9,14 +9,15 @@
 
 int _printf(const char *format, ...)
 {
-	char c;
-	int i, j, count = 0;
+	char *str;
+	int i, count = 0;
 	va_list ap;
 
 	va_start(ap, format);
 	i = 0;
 	if (format == NULL)
 		return (-1);
+
 	while (format && format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -31,7 +32,7 @@ int _printf(const char *format, ...)
 					count += _putchar('%');
 					break;
 				case 's':
-					char *str = va_arg(ap, char *);
+					str = va_arg(ap, char *);
 					if (str == NULL)
 						return (-1);
 					count += print_string(str);
