@@ -44,8 +44,8 @@ int _printf(const char *format, ...)
 
 		i++;
 	}
-
 	write(1, "\n", 2);
+	va_end(ap);
 
 	return (count);
 }
