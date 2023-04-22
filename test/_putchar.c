@@ -4,7 +4,7 @@
  * _putchar - prints a character
  * @c: character
  *
- * Returns: int
+ * Return: int
  */
 
 int _putchar(char c)

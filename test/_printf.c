@@ -37,16 +37,12 @@ int _printf(const char *format, ...)
 						return (-1);
 					count += print_string(str);
 					break;
-				default:
-					count += _putchar(format[i]);
-					break;
 			}
 		}
 		else
 			count += _putchar(format[i]);
 		i++;
 	}
-	_putchar('\n');
 	va_end(ap);
 
 	return (count);
