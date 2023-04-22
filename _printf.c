@@ -10,13 +10,14 @@
 int _printf(const char *format, ...)
 {
 	char c;
-	int i, j, count;
+	int i, j, count = 0;
 	va_list ap;
 
 	va_start(ap, format);
 	i = 0;
-
-	while (format[i] != '\0')
+	if (format == NULL)
+		return (-1);
+	while (format && format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
@@ -24,24 +25,24 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					c = va_arg(ap, int);
-					count += _putchar(c);
+					count += print_char(va_arg(ap, int));
 					break;
 				case '%':
-					c = '%';
-					count += _putchar(c);
+					count += _putchar('%');
 					break;
 				case 's':
 					char *str = va_arg(ap, char *);
-
-					for (j = 0; str[j] != '\0'; j++)
-						count += _putchar(str[j]);
+					if (str == NULL)
+						return (-1);
+					count += print_string(str);
+					break;
+				default:
+					count += _putchar(format[i]);
 					break;
 			}
 		}
 		else
 			count += _putchar(format[i]);
-
 		i++;
 	}
 	_putchar('\n');
