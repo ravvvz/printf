@@ -22,13 +22,13 @@ To use the _printf function, simply include the "main.h" header file in our C co
 
 
 ```c
-#include "holberton.h"
+#include "main.h"
 
 int main(void)
 {
 int num = 42;
 char c = 'H';
-char *str = "Hello, Holberton!";
+char *str = "Hello, C!";
 
 _printf("%c is my favorite letter.\n", c);
 _printf("The answer to everything is %d.\n", num);
