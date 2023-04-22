@@ -18,7 +18,7 @@ This printf function can print strings, characters, integers, and can also handl
 
 ## Usage
 
-To use the _printf function, simply include the "main.h" header file in our C code and call the function with the desired arguments. Here's an example:
+To use the _printf function, simply include the "main.h" header file in your C code and call the function with the desired arguments. Here's an example:
 
 
 ```c
