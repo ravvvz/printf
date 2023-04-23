@@ -2,7 +2,7 @@
 
 /**
  * print_string - prints a string
- * @str: takes in a char pointer
+ * @ap: va_arg
  *
  * Return: Number of char printed
  */

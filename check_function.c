@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check_function: checks the character a sends a function to perform
+ * check_function - checks the character a sends a function to perform
  * @c: takes in a character
  *
  * Return: pointer to function to perform op
