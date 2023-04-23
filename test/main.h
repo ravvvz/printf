@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#define KILO_BYTE 1024
 /**
  * struct func - group of functions to perform
  * @c: the value to look out for
@@ -27,6 +28,10 @@ int print_char(va_list);
 int print_string(va_list);
 int (*check_function(char))(va_list);
 int print_int(va_list);
+void print_num(int, int *);
+int print_binary(va_list);
+
+
 
 #endif /* MAIN_H */
 

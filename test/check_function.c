@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check_function - checks the character a sends a function to perform
+ * check_function - character and sends a function to perform operation
  * @c: takes in a character
  *
  * Return: pointer to function to perform op
@@ -14,6 +14,7 @@ int (*check_function(char c))(va_list ap)
 		{'s', print_string},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_binary},
 		{'x', NULL}
 	};
 	int i;

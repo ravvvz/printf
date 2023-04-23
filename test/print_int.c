@@ -1,6 +1,5 @@
 #include "main.h"
 
-void print_num(int value, int *count);
 /**
  * print_int - prints an int value
  * @ap: accepts a va_arg
@@ -16,27 +15,4 @@ int print_int(va_list ap)
 	print_num(value, &count);
 
 	return (count);
-}
-
-/**
- * print_num - prints the value in string
- * @value: takes in the value
- * @count: character counter
- *
- * Return: void
- */
-
-void print_num(int value, int *count)
-{
-	if (value < 0)
-	{
-		value = abs(value);
-		count += _putchar('-');
-	}
-
-	if (value / 10)
-	{
-		print_num(value / 10, count);
-	}
-	*count += _putchar(value % 10 + '0');
 }
