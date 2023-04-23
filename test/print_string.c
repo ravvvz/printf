@@ -2,7 +2,7 @@
 
 /**
  * print_string - prints a string
- * @str: takes in a char pointer
+ * @ap: takes in a char pointer
  *
  * Return: Number of char printed
  */

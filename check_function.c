@@ -12,6 +12,8 @@ int (*check_function(char c))(va_list ap)
 	f_options opr[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
 		{'x', NULL}
 	};
 	int i;

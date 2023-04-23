@@ -2,7 +2,7 @@
 
 /**
  * print_char - prints a character
- * @ap: va_arg
+ * @ap: a character
  *
  * Return: int
  */

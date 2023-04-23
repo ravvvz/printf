@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * struct func - group of functions to perform
@@ -25,6 +26,7 @@ int _putchar(char c);
 int print_char(va_list);
 int print_string(va_list);
 int (*check_function(char))(va_list);
+int print_int(va_list);
 
 #endif /* MAIN_H */
 

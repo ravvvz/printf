@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check_function: checks the character a sends a function to perform
+ * check_function - checks the character a sends a function to perform
  * @c: takes in a character
  *
  * Return: pointer to function to perform op
@@ -12,6 +12,8 @@ int (*check_function(char c))(va_list ap)
 	f_options opr[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
 		{'x', NULL}
 	};
 	int i;

@@ -45,5 +45,12 @@ int main(void)
 	printf("%d\n", original);
 	fake = _printf("%s\n", str);
 	printf("%d\n", fake);
+	_printf("Length:[%d, %i]\n", fake, fake);
+	printf("Length:[%d, %i]\n", original, original);
+
+
+	    _printf("Len:[%d]\n", fake);
+	    printf("Len:[%d]\n", original);
+
 	return (0);
 }
