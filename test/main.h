@@ -5,6 +5,8 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+#define KILO_BYTE 1024
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(char c);
