@@ -19,6 +19,7 @@ int (*check_function(char c))(va_list ap)
 		{'X', print_hex_cap},
 		{'x', print_hex},
 		{'u', print_unsigned},
+		{'S', custom_convert},
 		{'e', NULL}
 	};
 	int i;

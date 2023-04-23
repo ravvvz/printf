@@ -20,5 +20,6 @@ int main(void)
 	_printf("decimal: %d \noctal: %o \nhex: %x \nHEX: %X\n", b, b, b, b);
 
 	_printf("Unsigned: %u\n", -12);
+	_printf("S: %S\n", "Best\nSchool");
 	return (0);
 }
