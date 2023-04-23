@@ -1,49 +1,28 @@
 #include "main.h"
 
 /**
- * main - check our code
+ * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 
 int main(void)
 {
-	char *string = "was a lady, I'd be so fine";
-	char *str = NULL;
-	char c = 'I';
-	int original = 0, fake = 0;
+	int v = -12, i = 20;
+	char *str = "If I was a girl, I'd be so fine";
+	char c = 'E';
 
-	printf("Standard Library (printf):\n\n");
+	printf("Original Printf: \n");
 
-	original = printf("If %c %s %%\n", c, string);
+	printf("%s \n%c \nv: %d\n i: %d\n",
+			str, c, v, i);
 
-	printf("Original: %d\n", original);
+	printf("_____________________________\n\n");
+	printf("Our Printf: \n");
 
-	original = printf("Let's try to printf a simple sentence.\n");
+	_printf("%s \n%c \nv: %d\n i: %d\n",
+			str, c, v, i);
+	_printf("%b\n", 98);
 
-	printf("Original: %d\n", original);
-	printf("Character:[%c]\n", 'H');
-	printf("String:[%s]\n", "I am a string !");
-	original = printf("Percent:[%%]\n");
-	printf("%d\n", original);
-
-
-	printf("-----------------------------------\n\n");
-	
-	printf("Our Customized (printf):\n\n");
-
-	fake = _printf("If %c %s %%\n", c, string);
-	printf("%d\n", fake);
-	fake = _printf("Let's try to printf a simple sentence.\n");
-	printf("Fake: %d\n", fake);
-	_printf("Character:[%c]\n", 'H');
-	_printf("String:[%s]\n", "I am a string !");
-	fake = _printf("Percent:[%%]\n");
-	printf("%d\n", fake);
-
-	original = printf("%s\n", str);
-	printf("%d\n", original);
-	fake = _printf("%s\n", str);
-	printf("%d\n", fake);
 	return (0);
 }

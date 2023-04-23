@@ -10,8 +10,8 @@
 int print_binary(va_list ap)
 {
 	int count = 0, rem = 0, i = 0;
-	unsigned int num = va_arg(ap, int);
-	unsigned int array[KILO_BYTE];
+	int num = va_arg(ap, int);
+	int array[KILO_BYTE];
 
 	while (num != 0 && i < KILO_BYTE)
 	{
