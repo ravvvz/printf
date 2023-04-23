@@ -28,10 +28,13 @@ int print_char(va_list);
 int print_string(va_list);
 int (*check_function(char))(va_list);
 int print_int(va_list);
+void print_num_unsigned_int(unsigned long int, int *);
 void print_num(int, int *);
 int print_binary(va_list);
-
-
+int print_octal(va_list);
+int print_hex(va_list);
+int print_hex_cap(va_list);
+int print_unsigned(va_list);
 
 #endif /* MAIN_H */
 

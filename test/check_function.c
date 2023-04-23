@@ -15,12 +15,16 @@ int (*check_function(char c))(va_list ap)
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_binary},
-		{'x', NULL}
+		{'o', print_octal},
+		{'X', print_hex_cap},
+		{'x', print_hex},
+		{'u', print_unsigned},
+		{'e', NULL}
 	};
 	int i;
 
 	i = 0;
-	while (opr[i].c != 'x')
+	while (opr[i].c != 'e')
 	{
 		if (opr[i].c == c)
 			return (opr[i].func_ptr);
