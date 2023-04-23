@@ -9,9 +9,9 @@
 
 int _printf(const char *format, ...)
 {
+	char *str;
 	int i, count = 0;
 	va_list ap;
-	int (*func_ptr)(va_list);
 
 	va_start(ap, format);
 	i = 0;
@@ -23,12 +23,20 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '%')
-				count += _putchar('%');
-			else
+			switch (format[i])
 			{
-				func_ptr = check_function(format[i]);
-				count += func_ptr(ap);
+				case 'c':
+					count += print_char(va_arg(ap, int));
+					break;
+				case '%':
+					count += _putchar('%');
+					break;
+				case 's':
+					str = va_arg(ap, char *);
+					if (str == NULL)
+						str = "(null)";
+					count += print_string(str);
+					break;
 			}
 		}
 		else
@@ -36,6 +44,7 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(ap);
+	write(1, '\0', 0);
 
 	return (count);
 }

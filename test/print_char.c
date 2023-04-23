@@ -7,8 +7,9 @@
  * Return: int
  */
 
-int print_char(char c)
+int print_char(va_list ap)
 {
+	char c = va_arg(ap, int);
 	return (_putchar(c));
 }
 
