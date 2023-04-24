@@ -20,6 +20,7 @@ int (*check_function(char c))(va_list ap)
 		{'x', print_hex},
 		{'u', print_unsigned},
 		{'S', custom_convert},
+		{'p', address_print},
 		{'\0', NULL}
 	};
 	int i;

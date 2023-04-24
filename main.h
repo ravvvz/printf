@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #define KILO_BYTE 1024
 /**
@@ -36,8 +37,8 @@ int print_hex(va_list);
 int print_hex_cap(va_list);
 int print_unsigned(va_list);
 int custom_convert(va_list);
-void print_hex_custom(int, int *);
-
+void print_hex_custom(int *, int *);
+int address_print(va_list);
 
 #endif /* MAIN_H */
 

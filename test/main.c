@@ -11,6 +11,7 @@ int main(void)
 	int v = -12, i = 20, b = 98;
 	char *str = "If I was a girl, I'd be so fine";
 	char c = 'E';
+	char *p = &c;
 
 	printf("Our Printf: \n");
 
@@ -21,5 +22,6 @@ int main(void)
 
 	_printf("Unsigned: %u\n", -12);
 	_printf("S: %S\n", "Best\nSchool");
+	_printf("p: %p\n", p);
 	return (0);
 }

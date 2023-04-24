@@ -8,7 +8,7 @@
  * Return: void
  */
 
-void print_hex_custom(int n, int *count)
+void print_hex_custom(int *n, int *count)
 {
 	char hex[6] = {'A', 'B', 'C', 'D', 'E', 'F'};
 	int i, j, rem = 0;
@@ -16,10 +16,10 @@ void print_hex_custom(int n, int *count)
 
 	i = 0;
 	array[1] = -1;
-	while (n != 0 && i < KILO_BYTE)
+	while (*n != 0 && i < KILO_BYTE)
 	{
-		rem = n % 16;
-		n = n / 16;
+		rem = *n % 16;
+		*n = *n / 16;
 		array[i] = rem;
 		i++;
 	}

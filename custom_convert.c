@@ -9,7 +9,7 @@
 
 int custom_convert(va_list ap)
 {
-	int i, count;
+	int i, count, save;
 	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
@@ -23,7 +23,8 @@ int custom_convert(va_list ap)
 		{
 			count += _putchar('\\');
 			count += _putchar('x');
-			print_hex_custom(str[i], &count);
+			save = str[i];
+			print_hex_custom(&save, &count);
 		}
 		else
 		{
