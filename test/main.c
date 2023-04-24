@@ -17,9 +17,9 @@ int main(void)
 	_printf("%s \n%c \nv: %d\n i: %d\n", str, c, v, i);
 	_printf("%b\n", 98);
 
-	_printf("decimal: %d \noctal: %o \nhex: %x \nHEX: %X\n", b, b, b, b);
+	_printf("decimal: %d \noctal: %o \nhex: %x \nHEX: %X\n", b, b, 15, 15);
 
 	_printf("Unsigned: %u\n", -12);
-/*	_printf("S: %S\n", "Best\nSchool"); */
+	_printf("S: %S\n", "Best\nSchool");
 	return (0);
 }

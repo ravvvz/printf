@@ -12,8 +12,7 @@ int print_hex_cap(va_list ap)
 	int count = 0, i = 0, j = 0, rem = 0;
 	int array[KILO_BYTE];
 	int num = va_arg(ap, int);
-	char hexes[7] = {'A', 'B', 'C', 'D', 'E', 'F', '\0'};
-	int hexes_d[6] = {10, 11, 12, 13, 14, 15};
+	char hexes[6] = {'A', 'B', 'C', 'D', 'E', 'F'};
 
 	while (num != 0)
 	{
@@ -25,18 +24,13 @@ int print_hex_cap(va_list ap)
 	i--;
 	while (i >= 0)
 	{
-		j = 0;
 		if (array[i] >= 10 && array[i] <= 15)
-			while (hexes_d[j])
-			{
-				if (hexes_d[j] == array[i])
-				{
-					count += _putchar(hexes[j]);
-					break;
-				}
-				j++;
-			}
-		print_num(array[i], &count);
+		{
+			j = array[i] - 10;
+			count += _putchar(hexes[j]);
+		}
+		else
+			print_num(array[i], &count);
 		i--;
 	}
 
