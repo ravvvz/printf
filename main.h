@@ -35,7 +35,7 @@ int print_octal(va_list);
 int print_hex(va_list);
 int print_hex_cap(va_list);
 int print_unsigned(va_list);
-int custom_convert(va_list);
+/* int custom_convert(va_list); */
 
 #endif /* MAIN_H */
 

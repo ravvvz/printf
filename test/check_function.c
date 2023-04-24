@@ -19,13 +19,13 @@ int (*check_function(char c))(va_list ap)
 		{'X', print_hex_cap},
 		{'x', print_hex},
 		{'u', print_unsigned},
-		{'S', custom_convert},
-		{'e', NULL}
+		/* {'S', custom_convert}, */
+		{'\0', NULL}
 	};
 	int i;
 
 	i = 0;
-	while (opr[i].c != 'e')
+	while (opr[i].c)
 	{
 		if (opr[i].c == c)
 			return (opr[i].func_ptr);
