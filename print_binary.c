@@ -9,23 +9,26 @@
 
 int print_binary(va_list ap)
 {
-	int count = 0, rem = 0, i = 0;
-	int num = va_arg(ap, int);
-	int array[KILO_BYTE];
+	unsigned int num;
+	char binary[32];
+	int 1 = 0, j;
+	int count = 0;
 
-	while (num != 0 && i < KILO_BYTE)
+	num = va_arg(ap, unsigned int);
+
+	if (num == 0)
 	{
-		rem = num % 2;
-		num = num / 2;
-		array[i] = rem;
-		i++;
+		count += _putchar('0');
+	}
+	while (num > 0)
+	{
+		binary[i] = num % 2 + '0';
+		num /= 2;
+	}
+	for (j = i - 1; j >= 0; --j)
+	{
+		count += _putchar(binary[j]);
 	}
 
-	i--;
-	while (i >= 0)
-	{
-		print_num(array[i], &count);
-		i--;
-	}
 	return (count);
 }

@@ -13,9 +13,7 @@ int main(void)
 	char c = 'E';
 	char *p = &c;
 
-	printf("Our Printf: \n\n");
-
-	_printf("%+ d\n\n", 98);
+	printf("Our Printf: \n");
 
 	_printf("%s \n%c \nv: %d\n i: %d\n", str, c, v, i);
 	_printf("%b\n", 98);

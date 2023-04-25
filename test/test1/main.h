@@ -39,8 +39,6 @@ int print_unsigned(va_list);
 int custom_convert(va_list);
 void print_hex_custom(int *, int *);
 int address_print(va_list);
-int format_identifier(const char *, va_list, int);
-int check_plus(va_list, const char *, int *);
 
 #endif /* MAIN_H */
 

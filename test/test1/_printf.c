@@ -22,17 +22,20 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
-				return (-1);
-			if (format[i] == '%')
-				count += _putchar('%');
-			else
+			switch(format[i])
 			{
-				func_ptr = check_function(format[i]);
-				if (func_ptr == NULL)
-					count += _putchar('%') + _putchar(format[i]);
-				else
-					count += func_ptr(ap);
+				case '\0':
+					return (-1);
+					break;
+				case '%':
+					count += _putchar('%');
+					break;
+				default:
+					func_ptr = check_function(format[i]);
+					if (func_ptr == NULL)
+						count += _putchar('%') + _putchar(format[i]);
+					else
+						count += func_ptr(ap);
 			}
 		}
 		else

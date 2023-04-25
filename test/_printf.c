@@ -11,30 +11,19 @@ int _printf(const char *format, ...)
 {
 	int i, count = 0;
 	va_list ap;
-	int (*func_ptr)(va_list);
 
 	va_start(ap, format);
 	i = 0;
 	if (format == NULL)
 		return (-1);
-
 	while (format && format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '\0')
+			count += format_identifier(format, ap, i);
+			if (count == -1)
 				return (-1);
-			if (format[i] == '%')
-				count += _putchar('%');
-			else
-			{
-				func_ptr = check_function(format[i]);
-				if (func_ptr == NULL)
-					count += _putchar('%') + _putchar(format[i]);
-				else
-					count += func_ptr(ap);
-			}
 		}
 		else
 			count += _putchar(format[i]);
