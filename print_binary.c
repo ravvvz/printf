@@ -11,7 +11,7 @@ int print_binary(va_list ap)
 {
 	unsigned int num;
 	char binary[32];
-	int 1 = 0, j;
+	int i = 0, j;
 	int count = 0;
 
 	num = va_arg(ap, unsigned int);
